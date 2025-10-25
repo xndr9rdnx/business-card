@@ -1,0 +1,43 @@
+@use '@/shared/styles/animations';
+@use '@/shared/styles/mixins' as *;
+@use '@/shared/styles/variables' as *;
+
+.winnerModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 300px;
+
+    .title {
+        color: $accent;
+    }
+
+    .infoGrid {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+
+        .infoItem {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+
+            .label {
+            }
+
+            .value {
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                align-items: center;
+                gap: 0.25rem;
+            }
+        }
+    }
+
+    .actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

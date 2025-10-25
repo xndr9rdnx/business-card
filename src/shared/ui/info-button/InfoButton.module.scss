@@ -1,0 +1,20 @@
+@use '@/shared/styles/animations';
+@use '@/shared/styles/mixins' as *;
+@use '@/shared/styles/variables' as *;
+
+.infoButton {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 20;
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        color: $accent;
+    }
+}
