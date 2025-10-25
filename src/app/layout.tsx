@@ -33,7 +33,7 @@ export default function RootLayout({
             </head>
             <body className={clsx(styles.layout, latoSans.variable)}>
                 <main className={styles.content}>
-
+                    {children}
                 </main>
             </body>
         </html>
