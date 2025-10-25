@@ -2,9 +2,6 @@
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import clsx from 'clsx';
-import { FRONTEND_URL } from '@/shared/config';
-import '@/shared/styles/global.scss';
-import { AppProviders } from '../shared/lib/providers';
 import styles from './layout.module.scss';
 
 // Подключаем шрифт Lato
@@ -21,7 +18,7 @@ export const metadata: Metadata = {
         template: '%s | RoboMine Сapital',
     },
     description: 'Зарабатывай на майнинге криптовалюты',
-    metadataBase: new URL(FRONTEND_URL || 'Ошибка переменной URL'),
+    // metadataBase: new URL(FRONTEND_URL || 'Ошибка переменной URL'),
 };
 
 export default function RootLayout({
@@ -36,7 +33,7 @@ export default function RootLayout({
             </head>
             <body className={clsx(styles.layout, latoSans.variable)}>
                 <main className={styles.content}>
-                    <AppProviders>{children}</AppProviders>
+
                 </main>
             </body>
         </html>
